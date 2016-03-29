@@ -24,5 +24,7 @@ RUN tar -zxvf beanstalkd-cli-linux.tar.gz
 RUN mv beanstalkd-cli /usr/local/bin/beanstalkd-cli
 RUN rm beanstalkd-cli-linux.tar.gz
 
+EXPOSE 11300
+
 # Clean up APT when done.
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
